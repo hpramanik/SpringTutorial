@@ -16,8 +16,8 @@ public class DemoApplication {
 		ApplicationContext ctx = SpringApplication.run(DemoApplication.class, args);
 		MyController myController = (MyController) ctx.getBean("myController");
 
-		String greeting = myController.sayHello();
-
+		System.out.println("--------- Primary Bean");
+		String greeting = myController.getGreeting();
 		System.out.println(greeting);
 
 		System.out.println("--------- Property based");
