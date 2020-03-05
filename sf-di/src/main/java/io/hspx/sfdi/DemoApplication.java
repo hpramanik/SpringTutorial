@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import io.hspx.sfdi.controllers.ConstructorInjectedController;
+import io.hspx.sfdi.controllers.I18nController;
 import io.hspx.sfdi.controllers.MyController;
 import io.hspx.sfdi.controllers.PropertyInjectedController;
 import io.hspx.sfdi.controllers.SetterInjectedController;
@@ -34,6 +35,10 @@ public class DemoApplication {
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx
 				.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+
+		System.out.println("--------- Profile based I18nService");
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.getGreeting());
 
 	}
 
