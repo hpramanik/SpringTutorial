@@ -1,5 +1,6 @@
 package io.hspx.sfdi.controllers;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import io.hspx.sfdi.services.GreetingService;
@@ -8,7 +9,7 @@ import io.hspx.sfdi.services.GreetingService;
 public class ConstructorInjectedController {
     private final GreetingService greetingService;
 
-    public ConstructorInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier("constructorGreetingService") GreetingService greetingService) {
         super();
         this.greetingService = greetingService;
     }

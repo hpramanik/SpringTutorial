@@ -3,14 +3,14 @@ package io.hspx.sfdi.controllers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.hspx.sfdi.services.GreetingServiceImpl;
+import io.hspx.sfdi.services.ConstructorGreetingService;
 
 class ConstructorInjectedControllerTest {
     ConstructorInjectedController controller;
 
     @BeforeEach
     void setUp() {
-        controller = new ConstructorInjectedController(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new ConstructorGreetingService());
     }
 
     @Test
