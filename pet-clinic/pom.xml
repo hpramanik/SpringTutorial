@@ -10,8 +10,8 @@
 	<groupId>io.hspx</groupId>
 	<artifactId>pet-clinic</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>pet-clinic</name>
+	<description>Pet Clinic project for Spring Boot</description>
 	<modules>
 		<module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
