@@ -1,0 +1,5 @@
+io\hspx\petclinic\models\Vet.class
+io\hspx\petclinic\models\Owner.class
+io\hspx\petclinic\models\PetType.class
+io\hspx\petclinic\models\Pet.class
+io\hspx\petclinic\models\Person.class
