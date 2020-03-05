@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>io.hspx</groupId>
 	<artifactId>pet-clinic</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>pet-clinic</name>
 	<description>Pet Clinic project for Spring Boot</description>
 	<modules>
@@ -41,7 +41,6 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/hpramanik/SpringTutorial.git</developerConnection>
-		<tag>HEAD</tag>
 	</scm>
 
 </project>
