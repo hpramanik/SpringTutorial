@@ -1,5 +1,6 @@
 package io.hspx.sfdi;
 
+import io.hspx.sfdi.examplebeans.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -16,6 +17,10 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DemoApplication.class, args);
 		MyController myController = (MyController) ctx.getBean("myController");
+
+		System.out.println("--------- Read from property file");
+		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean("fakeDataSource");
+		System.out.println(fakeDataSource);
 
 		System.out.println("--------- Primary Bean");
 		String greeting = myController.getGreeting();
