@@ -4,6 +4,15 @@ public class FakeDataSource {
     private String user;
     private String password;
     private String url;
+    private String javaHomePath;
+
+    public String getJavaHomePath() {
+        return javaHomePath;
+    }
+
+    public void setJavaHomePath(String javaHomePath) {
+        this.javaHomePath = javaHomePath;
+    }
 
     public String getUser() {
         return user;
@@ -35,6 +44,7 @@ public class FakeDataSource {
                 "user='" + user + '\'' +
                 ", password='" + password + '\'' +
                 ", url='" + url + '\'' +
+                ", javaHomePath='" + javaHomePath + '\'' +
                 '}';
     }
 }
