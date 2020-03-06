@@ -5,6 +5,24 @@
     <title>Pet-Clinic:Owners</title>
 </head>
 <body>
+<!--/*@thymesVar id="owner" type="io.hspx.petclinic.model.Owner"*/-->
 <h1 th:text="'List of Owners'">Index Page</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="owner : ${owners}">
+        <td th:text="${owner.id}">Id</td>
+        <td th:text="${owner.firstName}">First Name</td>
+        <td th:text="${owner.lastName}">Last Name</td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
