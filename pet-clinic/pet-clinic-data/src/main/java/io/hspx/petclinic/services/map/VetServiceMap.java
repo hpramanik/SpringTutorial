@@ -1,11 +1,11 @@
 package io.hspx.petclinic.services.map;
 
 import io.hspx.petclinic.models.Vet;
-import io.hspx.petclinic.services.CrudService;
+import io.hspx.petclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
