@@ -27,6 +27,9 @@ public class PropertyConfig {
     @Value("${hspx.customProp}")
     String customProperty;
 
+    @Value("${hspx.ymlCustomProp}")
+    String ymlCustomProp;
+
     @Bean
     public FakeDataSource fakeDataSource() {
         FakeDataSource fakeDataSource = new FakeDataSource();
@@ -35,6 +38,7 @@ public class PropertyConfig {
         fakeDataSource.setUrl(url);
         fakeDataSource.setJavaHomePath(environment.getProperty("JAVA_HOME"));
         fakeDataSource.setCustomPropertyFromApplicationPropertiesFile(customProperty);
+        fakeDataSource.setYmlCustomProp(ymlCustomProp);
 
         return fakeDataSource;
     }

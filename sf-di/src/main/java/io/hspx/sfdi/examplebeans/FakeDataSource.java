@@ -6,6 +6,15 @@ public class FakeDataSource {
     private String url;
     private String javaHomePath;
     private String customPropertyFromApplicationPropertiesFile;
+    private String ymlCustomProp;
+
+    public String getYmlCustomProp() {
+        return ymlCustomProp;
+    }
+
+    public void setYmlCustomProp(String ymlCustomProp) {
+        this.ymlCustomProp = ymlCustomProp;
+    }
 
     public String getCustomPropertyFromApplicationPropertiesFile() {
         return customPropertyFromApplicationPropertiesFile;
@@ -55,6 +64,7 @@ public class FakeDataSource {
                 ", url='" + url + '\'' +
                 ", javaHomePath='" + javaHomePath + '\'' +
                 ", customPropertyFromApplicationPropertiesFile='" + customPropertyFromApplicationPropertiesFile + '\'' +
+                ", ymlCustomProp='" + ymlCustomProp + '\'' +
                 '}';
     }
 }

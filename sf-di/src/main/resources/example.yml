@@ -1,0 +1,12 @@
+# This is a Comment
+name: John
+
+names:
+  - John
+  - Paul
+  - Ringo
+
+book:
+  author: Joe Buck
+  publisher: Random
+  published: yes # bool
