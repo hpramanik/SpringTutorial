@@ -5,6 +5,15 @@ public class FakeDataSource {
     private String password;
     private String url;
     private String javaHomePath;
+    private String customPropertyFromApplicationPropertiesFile;
+
+    public String getCustomPropertyFromApplicationPropertiesFile() {
+        return customPropertyFromApplicationPropertiesFile;
+    }
+
+    public void setCustomPropertyFromApplicationPropertiesFile(String customPropertyFromApplicationPropertiesFile) {
+        this.customPropertyFromApplicationPropertiesFile = customPropertyFromApplicationPropertiesFile;
+    }
 
     public String getJavaHomePath() {
         return javaHomePath;
@@ -45,6 +54,7 @@ public class FakeDataSource {
                 ", password='" + password + '\'' +
                 ", url='" + url + '\'' +
                 ", javaHomePath='" + javaHomePath + '\'' +
+                ", customPropertyFromApplicationPropertiesFile='" + customPropertyFromApplicationPropertiesFile + '\'' +
                 '}';
     }
 }

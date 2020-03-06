@@ -24,6 +24,9 @@ public class PropertyConfig {
     @Value("${hspx.dburl}")
     String url;
 
+    @Value("${hspx.customProp}")
+    String customProperty;
+
     @Bean
     public FakeDataSource fakeDataSource() {
         FakeDataSource fakeDataSource = new FakeDataSource();
@@ -31,6 +34,7 @@ public class PropertyConfig {
         fakeDataSource.setPassword(password);
         fakeDataSource.setUrl(url);
         fakeDataSource.setJavaHomePath(environment.getProperty("JAVA_HOME"));
+        fakeDataSource.setCustomPropertyFromApplicationPropertiesFile(customProperty);
 
         return fakeDataSource;
     }
