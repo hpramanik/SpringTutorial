@@ -4,8 +4,6 @@ import io.hspx.petclinic.models.Owner;
 import io.hspx.petclinic.models.Vet;
 import io.hspx.petclinic.services.OwnerService;
 import io.hspx.petclinic.services.VetService;
-import io.hspx.petclinic.services.map.OwnerServiceMap;
-import io.hspx.petclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,9 @@ public class DataSeed implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataSeed() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataSeed(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
