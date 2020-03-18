@@ -1,7 +1,7 @@
 package io.hspx.petclinic.services.map;
 
 import io.hspx.petclinic.models.Visit;
-import io.hspx.petclinic.services.springDataJPA.VisitService;
+import io.hspx.petclinic.services.VisitService;
 
 import java.util.Set;
 
