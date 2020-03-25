@@ -3,10 +3,14 @@ package io.hspx.petclinic.services.springDataJPA;
 import io.hspx.petclinic.models.Specialty;
 import io.hspx.petclinic.repositories.SpecialtyRepository;
 import io.hspx.petclinic.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
+@Profile("springDataJPA")
 public class SpecialtyServiceJPA implements SpecialtyService {
     private final SpecialtyRepository specialtyRepository;
 
