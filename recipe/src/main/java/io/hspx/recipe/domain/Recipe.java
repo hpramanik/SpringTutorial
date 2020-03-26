@@ -2,12 +2,14 @@ package io.hspx.recipe.domain;
 
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 @Data
+@NoArgsConstructor
 @Entity
 public class Recipe {
     @Id
@@ -41,6 +43,15 @@ public class Recipe {
             inverseJoinColumns = @JoinColumn(name = "CATEGORY_ID"))
     private Set<Category> categories = new HashSet<>();
 
+    public Recipe(Long id, String description, Integer prepTime, Integer cookTime, Integer servings, String source, String url) {
+        this.id = id;
+        this.description = description;
+        this.prepTime = prepTime;
+        this.cookTime = cookTime;
+        this.servings = servings;
+        this.source = source;
+        this.url = url;
+    }
 
     public void setNotes(Notes notes) {
         this.notes = notes;
